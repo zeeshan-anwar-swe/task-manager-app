@@ -1,0 +1,26 @@
+{
+  "name": "task-manager-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node back-end/server.js",
+    "backEnd": "nodemon back-end/server.js",
+    "frontEnd": "npm start --prefix front-end",
+    "both": "concurrently \"npm run backEnd\" \"npm run frontEnd\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontEnd && npm run build --prefix frontEnd"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1",
+    "nodemon": "^2.0.21"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
