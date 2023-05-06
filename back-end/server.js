@@ -11,13 +11,15 @@ if (process.env.NODE_ENV === "production") {
 	app.use(express.static(path.join(__dirname, "../front-end/build")));
 
 	app.get("*", (request, response) => {
-		response.sendFile(
-			path.resolve(__dirname, "../", "front-end", "build", "index.html")
-		);
+	response.sendFile(
+	path.resolve(__dirname, "../", "front-end", "build", "index.html")
+	);
 	});
-} else {
+}
+
+else {
 	app.get("/", (request, response) => {
-		response.send("Home page");
+	response.send("Home page");
 	});
 }
 

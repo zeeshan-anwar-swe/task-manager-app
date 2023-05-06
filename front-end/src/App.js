@@ -5,11 +5,10 @@ import TaskList from "./components/task-list";
 export const URL = process.env.REACT_APP_SERVER_HOST_URL;
 
 function App() {
-  console.log(">>>>>>>>",URL);
   return (
     <div className="app">
       <div className="task-container">
-        <TaskList />
+      <TaskList />
       </div>
       <ToastContainer />
     </div>
